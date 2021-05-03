@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return <Wrapper>
-    <h5>
-    &copy; {new Date().getFullYear()}
-    </h5>
+    <Link to ="/" className="footer-text"><h5 style={{color:"var(--clr-primary-5)"}}>Furnished</h5></Link>
+    <h5>&copy; {new Date().getFullYear()}</h5>
     <h5>All rights reserved</h5>
   </Wrapper>
 }
@@ -20,10 +20,9 @@ const Wrapper = styled.footer`
   span {
     color: var(--clr-primary-5);
   }
-  h5 {
+  h5{
     color: var(--clr-white);
     margin: 0.1rem;
-
     font-weight: 400;
     text-transform: none;
     line-height: 1.25;
